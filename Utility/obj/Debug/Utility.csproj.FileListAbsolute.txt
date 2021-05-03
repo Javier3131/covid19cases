@@ -1,0 +1,5 @@
+C:\Projects\Covid\Utility\bin\Debug\Utility.dll
+C:\Projects\Covid\Utility\bin\Debug\Utility.pdb
+C:\Projects\Covid\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Projects\Covid\Utility\obj\Debug\Utility.dll
+C:\Projects\Covid\Utility\obj\Debug\Utility.pdb

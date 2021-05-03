@@ -1,0 +1,68 @@
+
+
+
+
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="onRefresh()">Refresh</button>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a class="btn btn-success" title="Download JSON" [href]="downloadJsonHref" download="download.json">JSON</a>
+        <a class="btn btn-secondary" title="Download XML" (click)="export()">XML</a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <table id="tabletop10Cases" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" *ngIf="showTop10CasesRegions">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Cases</th>
+            <th>Deaths</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of top10Cases" (click)="onGetCasesTop10ByRegion(c.region.name)">
+            <td>{{ c.region.name }}</td>
+            <td>{{ c.confirmed | number }}</td>
+            <td>{{ c.deaths | number }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="tabletop10CasesByRegion" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTriggerProvinces" class="row-border hover" *ngIf="showTop10CasesProvinces">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Cases</th>
+            <th>Deaths</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of top10CasesByRegion">
+            <td *ngIf="c.region.province">{{ c.region.province }}</td>
+            <td *ngIf="!c.region.province">{{ c.region.name }}</td>
+            <td>{{ c.confirmed | number }}</td>
+            <td>{{ c.deaths | number }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

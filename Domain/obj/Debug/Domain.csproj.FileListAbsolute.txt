@@ -1,0 +1,6 @@
+C:\Projects\Covid\Domain\bin\Debug\Domain.dll
+C:\Projects\Covid\Domain\bin\Debug\Domain.pdb
+C:\Projects\Covid\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Projects\Covid\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Projects\Covid\Domain\obj\Debug\Domain.dll
+C:\Projects\Covid\Domain\obj\Debug\Domain.pdb
